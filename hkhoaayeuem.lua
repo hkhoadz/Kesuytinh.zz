@@ -1,5 +1,28 @@
+--[[  
+____  _              _____ _     _   ____                       
+/ ___|(_) ___ _   _  |_   _| |__ (_) / ___| _ __   __ _  ___ ___ 
+\___ \| |/ _ \ | | |   | | | '_ \| | \___ \| '_ \ / _` |/ __/ _ \
+ ___) | |  __/ |_| |   | | | | | | |  ___) | |_) | (_| | (_|  __/
+|____/|_|\___|\__,_|   |_| |_| |_|_| |____/| .__/ \__,_|\___\___|
+                                           |_|                                         
+Siêu Thị Space Cảm Ơn Bạn Đã Tin Tưởng Và Sử Dụng Dịch Vụ Của Chúng Tôi, Nếu Thấy Hữu Ít Hãy Chia Sẻ Cho Bạn Bè Của Bạn !!
+- Website: sieuthispace.xyz
+- Page: fb.com/dichvuspace
+- Facebook Admin: fb.com/minhtien.dino
+
+--// Lưu Ý:
+- Không Được Share Hay Crack Mã Nguồn Này Cho Ai! Nếu Không Bạn Sẽ Bị Ban IP Khỏi Website Vĩnh Viễn!
+- Chúng Tôi Không Nhận Hỗ Trợ Những Mã Nguồn Miễn Phí, Xin Đừng Bảo Vì Sao. Tạo Ticket Hỗ Trợ Của Website Tại: https://dash.sieuthispace.xyz/client/ticket
+- Nếu Bạn Edit Source Và Up Web Share Nhớ Obfuscate Script. Nếu Bạn Có Tiền Thì Sử Dụng: Lura.Ph, Luarmor.Net | Nếu Bạn Không Có Tiền Thì Dùng: luaobfuscate.com, MoonSec, 77Fuscate,... Nhé!
+]]
+---///--------------------------------------------------------------\\\---
+----------------------------------------------------------------------------------------------------------------------------------------------
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+----------------------------------------------------------------------------------------------------------------------------------------------
 local Window = Fluent:CreateWindow({
-    Title = "Hkhoaaa yeu em",
+    Title = "Hkhoaaa ???",
     SubTitle = "Version 2.3",
     TabWidth = 160,
     Size = UDim2.fromOffset(530, 350),
@@ -2509,7 +2532,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Create Tabs
 local Farming = Tabs.Main:AddSection("Farming")
-local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
+local listfastattack = {'Normal Attack','Fast Attack','dont use'}
 
     local DropdownDelayAttack = Tabs.Main:AddDropdown("DropdownDelayAttack", {
         Title = "Select Fast Attack",
@@ -2521,18 +2544,18 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack'}
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackFaiFao_Mode = Value
-	if _G.FastAttackFaiFao_Mode == "Fast Attack" then
+	if _G.FastAttackFao_Mode == "Fast Attack" then
 		_G.Fast_Delay = 0.12
 	elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
 		_G.Fast_Delay = 0.2
-	elseif _G.FastAttackFaiFao_Mode == "Super Fast Attack" then
+	elseif _G.FastAttackFaiFao_Mode == "dont use" then
 		_G.Fast_Delay = 0.05
 	end
 end)
 
     local DropdownSelectWeapon = Tabs.Main:AddDropdown("DropdownSelectWeapon", {
         Title = "Weapon",
-        Description = "Chọn Vũ Khí",
+        Description = "select weapon",
         Values = {'Melee','Sword','Blox Fruit'},
         Multi = false,
         Default = 1,
@@ -7203,7 +7226,7 @@ local Mastery = Tabs.Misc:AddSection("Day")
 
 Tabs.Misc:AddButton({
 	Title = "Remove Fog",
-	Description = "xoa fog",
+	Description = "Xóa xương mù",
 	Callback = function()
         NoFog()
     end
@@ -7241,7 +7264,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709143733" then
             Hop()
             Fluent:Notify({
-                Title = "Hkhoaa Hub",
+                Title = " hkhoaa Hub",
                 Content = "Turn Off Find Full Moon...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7249,7 +7272,7 @@ spawn(function()
         elseif game:GetService("Lighting").Sky.MoonTextureId=="http://www.roblox.com/asset/?id=9709150401" then
             Hop()
             Fluent:Notify({
-                Title = "hkoaaa Hub",
+                Title = "hkoaaa ",
                 Content = "Hop...",
                 SubContent = "", -- Optional
                 Duration = 5 -- Set to nil to make the notification not disappear
@@ -7291,11 +7314,11 @@ spawn(function()
 end)
 end
 ----------------------------------------------------------------------------------------------------------------------------------------------
-InterfaceManager:SetFolder("hkhoaaScriptHub")
-SaveManager:SetFolder("FaiFaoScriptHub/specific-game")
+InterfaceManager:SetFolder("hkhoaa")
+SaveManager:SetFolder("hkhoaa/specific-game")
 Window:SelectTab(1)
 Fluent:Notify({
-    Title = "hkhoaa",
+    Title = "hkhoaa Hub",
     Content = "The script has been loaded.",
     Duration = 8
 })
