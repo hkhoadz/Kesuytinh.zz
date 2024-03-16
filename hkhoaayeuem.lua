@@ -33,15 +33,6 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
-    Player = Window:AddTab({ Title = "Player", Icon = "box" }),
-    Teleport = Window:AddTab({ Title = "Island", Icon = "palmtree" }),
-    Fruit = Window:AddTab({ Title = "Fruit", Icon = "cherry" }),
-    Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
-    Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
-    Shop = Window:AddTab({ Title = "Shop", Icon = "shopping-cart" }),
-	Misc = Window:AddTab({ Title = "Misc", Icon = "list-plus" }),
-    Hop = Window:AddTab({ Title = "Hop", Icon = "wifi" }),
 }
 local Options = Fluent.Options
 do
@@ -2543,12 +2534,12 @@ local listfastattack = {'Normal Attack','Fast Attack','dont use'}
     })
     DropdownDelayAttack:SetValue("Fast Attack")
     DropdownDelayAttack:OnChanged(function(Value)
-    _G.FastAttackFaiFao_Mode = Value
+    _G.FastAttackhkhoaa_Mode = Value
 	if _G.FastAttackFao_Mode == "Fast Attack" then
 		_G.Fast_Delay = 0.12
-	elseif _G.FastAttackFaiFao_Mode == "Normal Attack" then
+	elseif _G.FastAttackhkhoaa_Mode == "Normal Attack" then
 		_G.Fast_Delay = 0.2
-	elseif _G.FastAttackFaiFao_Mode == "dont use" then
+	elseif _G.FastAttackhkhoaa_Mode == "dont use" then
 		_G.Fast_Delay = 0.05
 	end
 end)
@@ -5081,7 +5072,7 @@ Options.ToggleQuanSat:SetValue(false)
 local ToggleFastAttack = Tabs.Player:AddToggle("ToggleFastAttack", {Title = " Click Attack Player",Description = "Đánh Người Chơi", Default = false })
 
 ToggleFastAttack:OnChanged(function(Value)
- _G.FastAttackFaiFao = Value
+ _G.FastAttackhkhoaa = Value
 end)
 Options.ToggleFastAttack:SetValue(false)
 
@@ -5108,10 +5099,10 @@ SliderDelayAttackPlayer:SetValue(0.1)
 spawn(function()
 while wait() do
     pcall(function()
-        if _G.FastAttackFaiFao then
+        if _G.FastAttackhkhoaa then
             repeat wait(_G.DelayAttackPlayer)
                AttackNoCoolDown()
-            until not _G.FastAttackFaiFao
+            until not _G.FastAttackhoaa
         end
     end)
 end
